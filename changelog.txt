@@ -1,0 +1,4 @@
+*** WP FigPii Changelog ***
+
+2021-02-08 - version 0.0.1
+* .
