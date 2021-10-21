@@ -1,14 +1,14 @@
 # wp-figpii
 
-> Contributors: reza-j
+> Contributors: figpii
 > 
 > Tags: figpii
 > 
 > Requires at least: 3.8
 > 
-> Tested up to: 5.1
+> Tested up to: 5.8.1
 > 
-> Stable tag: 0.0.3
+> Stable tag: 2.0
 > 
 > License: GPLv3
 > 
@@ -38,4 +38,6 @@ in the source code. Fill your FigPii Access Key, it is enough.
 
 **Changelog**
 
-0.0.1 - 2021-02-08
+0.0.1 - 2021-02-08 
+
+2.0 -   2021-10-21

@@ -1,18 +1,18 @@
 <?php
 /**
-* Plugin Name: WP Figpii
-* Plugin URI: https://github.com/invesp/wp-figpii
-* Description: Figpii integration for WordPress.
+* Plugin Name: FigPii
+* Plugin URI: https://github.com/figpii/figpii-wordpress-plugin
+* Description: FigPii integration for WordPress.
 * Author: FigPii Development
-* Author URI: https://github.com/invesp
-* Version: 0.0.3
-* Text Domain: wp-figpii
+* Author URI: https://github.com/figpii
+* Version: 2.0
+* Text Domain: figpii
 * Domain Path: /languages/
 *
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 *
-* @package   WP-Figpii
+* @package   FigPii
 * @author    FigPii Development
 * @category  Analytics
 * @copyright FigPii
@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
 require_once plugin_dir_path( __FILE__ ) . 'classes/class-wp-figpii-connector.php';
 
 /**
-* # WP Figpii Main Plugin Class
+* # FigPii Main Plugin Class
 *
 * ## Plugin Overview
 *

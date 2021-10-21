@@ -1,13 +1,13 @@
-=== WP Figpii ===
-Contributors: invesp
+=== FigPii ===
+Contributors: figpii
 Tags: figpii
 Requires at least: 3.8
-Tested up to: 5.1
-Stable tag: 0.0.3
+Tested up to: 5.8.1
+Stable tag: 2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-figpii connector that can prevent pings while logged as admin.
+FigPii connector that can prevent pings while logged as admin.
 
 == Description ==
 
@@ -30,4 +30,4 @@ in the source code. Fill your FigPii Access Key, it is enough.
 == Changelog ==
 
 = 0.0.1 - 2021-02-08 =
-
+= 2.0 - 2021-10-21
