@@ -1,12 +1,12 @@
 <?php
 
-// No direct access to this file
-defined('ABSPATH') or die();
+  // No direct access to this file
+  defined( 'ABSPATH' ) or die();
 
-$default_settings = array('figpii_id' => '', 'disable_for_admin' => 'yes');
+  $default_settings = array('figpii_id' => '', 'disable_for_admin' => 'yes');
 
-$settings = get_option('wp_figpii');
-$settings = is_array($settings) ? $settings : $default_settings;
+  $settings = get_option( 'figpii' );
+  $settings = is_array($settings) ? $settings : $default_settings;
 ?>
 <div id="business-info-wrap" class="wrap">
     <style>
@@ -29,7 +29,7 @@ $settings = is_array($settings) ? $settings : $default_settings;
             margin-top: -6px !important;
         }
 
-        #wp_figpii_id {
+        #figpii_id {
             border: 2px solid #230936;
 
             border-radius: 24px;
@@ -124,7 +124,7 @@ $settings = is_array($settings) ? $settings : $default_settings;
     <h2 class="main-h2">I already have a figPii Account</h2>
 
     <form method="post" action="options.php">
-        <?php settings_fields('wp_figpii'); ?>
+        <?php settings_fields('figpii'); ?>
 
         <table class="form-table">
 
@@ -133,17 +133,17 @@ $settings = is_array($settings) ? $settings : $default_settings;
             <tr>
 
                 <th scope="row" style="display: none">
-                    <label for="wp_figpii_id"><?php esc_html_e('Figpii Access Key', 'wp-figpii'); ?></label>
+                    <label for="figpii_id"><?php esc_html_e('Figpii Access Key', 'figpii'); ?></label>
                 </th>
 
                 <td>
-                    <input type="text" name="wp_figpii[figpii_id]" id="wp_figpii_id"
+                    <input type="text" name="figpii[figpii_id]" id="figpii_id"
                            value="<?php echo $settings['figpii_id']; ?>" maxlength="100"/>
                     <p class="sub-description">
                         <a href="https://figpii.com/dashboard/?guide=wordpress" target="_blank">Where's my Access Key?</a>
                     </p>
                     <p style="display: none" class=""
-                       id="wp_figpii_id_description"><?php esc_html_e('(Leave blank to disable)', 'wp-figpii'); ?></p>
+                       id="figpii_id_description"><?php esc_html_e('(Leave blank to disable)', 'wp-figpii'); ?></p>
                 </td>
                 <td>
                     <?php submit_button($text = 'Connect To FigPii'); ?>
@@ -154,12 +154,12 @@ $settings = is_array($settings) ? $settings : $default_settings;
             <tr>
 
                 <th scope="row" style="    padding-top: 0px;padding-top: 0px;    padding-left: 32px;   font-size: 18px;    padding-bottom: 0px; color: #230936;">
-                    <label for="wp_figpii_disable_for_admin"><?php esc_html_e('Disable for admin?', 'wp-figpii'); ?></label>
+                    <label for="figpii_disable_for_admin"><?php esc_html_e('Disable for admin?', 'figpii'); ?></label>
                 </th>
 
                 <td style="    padding-top: 0px;">
-                    <input type="hidden" name="wp_figpii[disable_for_admin]" value="no">
-                    <input type="checkbox" name="wp_figpii[disable_for_admin]" id="wp_figpii_disable_for_admin"
+                    <input type="hidden" name="figpii[disable_for_admin]" value="no">
+                    <input type="checkbox" name="figpii[disable_for_admin]" id="figpii_disable_for_admin"
                            value="yes"
                            <?php if ('yes' === $settings['disable_for_admin']) { ?>checked="checked"<?php } ?> />
                 </td>

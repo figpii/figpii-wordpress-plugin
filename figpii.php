@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: FigPii
-* Plugin URI: https://github.com/figpii/figpii-wordpress-plugin
+* Plugin URI: https://figpii.com
 * Description: FigPii integration for WordPress.
 * Author: FigPii Development
 * Author URI: https://github.com/figpii
@@ -23,20 +23,19 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
 
-require_once plugin_dir_path( __FILE__ ) . 'classes/class-wp-figpii-connector.php';
+require_once plugin_dir_path( __FILE__ ) . 'classes/class-figpii-connector.php';
 
 /**
 * # FigPii Main Plugin Class
 *
 * ## Plugin Overview
 *
-* Plugin to connect your site with figpii changing the Figpii Access Key from wp-admin.
-* Also it does not connect with Figpii while you are logged.
+* Integrate FigPii ALL-IN-ONE CRO platform with your WordPress site in 2 clicks. all you need to do is retrieve your access key from * https://figpii.com/dashboard and activate the plugin.
 *
 */
 class WP_Figpii {
   /** plugin version number */
-  public static $version = '0.0.1';
+  public static $version = '2.0';
 
   /** @var string the plugin file */
   public static $plugin_file = __FILE__;
@@ -47,12 +46,12 @@ class WP_Figpii {
   /**
   * Initializes the plugin
   *
-  * @since 0.0.1
+  * @since 2.0
   */
   public static function init() {
     self::$plugin_dir = dirname(__FILE__);
 
-    $connector = new WP_Figpii_Connector();
+    $connector = new Figpii_Connector();
     $connector->load();
 
     // Load translation files
